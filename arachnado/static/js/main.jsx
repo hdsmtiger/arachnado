@@ -7,6 +7,7 @@ var { Route, RouteHandler, Link, DefaultRoute, NotFoundRoute } = Router;
 var { IndexPage } = require("./pages/IndexPage.jsx");
 var { JobPage } = require("./pages/JobPage.jsx");
 var { SitesPage, SitePage } = require("./pages/SitesPage.jsx");
+var { HelloWorldPage } = require("./pages/HelloWorldPage.jsx");
 
 var NotFound = React.createClass({
     render: function () {
@@ -34,6 +35,7 @@ var routes = (
         <DefaultRoute handler={IndexPage} name="index" />
         <Route path="job/:id" handler={JobPage} name="job" />
         <Route path="sites" handler={SitesPage} name="sites" />
+        <Route path="hello" handler={HelloWorldPage} name="hello" />
         <NotFoundRoute handler={NotFound} />
     </Route>
 );
